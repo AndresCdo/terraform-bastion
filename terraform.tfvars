@@ -1,0 +1,7 @@
+project_id           = "cellular-automata-2023"                   
+bucket_name          = "my-bucket-48693"
+machine_type         = "e2-micro"
+linux_image          = "ubuntu-os-cloud/ubuntu-2004-lts"
+gce_ssh_user         = "andres"
+gce_ssh_pub_key_file = "~/.ssh/id_rsa.pub"
+gce_ssh_key_file     = "~/.ssh/id_rsa"
