@@ -81,3 +81,11 @@ resource "google_compute_instance" "vm" {
     }
   }
 }
+
+resource "null_resource" "provider" {
+  depends_on = [google_compute_instance.vm]
+
+  provisioner "local-exec" {
+    command = "bash -c 'echo ${google_compute_instance.vm.network_interface[0].access_config[0].nat_ip} > inventory'"
+  }
+}
